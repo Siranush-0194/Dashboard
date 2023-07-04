@@ -1,13 +1,17 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-
+import Sidebar from "./Sidebard";
 export default function Layout() {
     return(
-        <div>
-        <div className="bg-sky-200"> sidebar </div>
-        <div className="bg-teal-200">headder</div>
+        <div className=" flex flex-row h-screen w-screen overflow-hidden">
+       <Sidebar/>
+        <div className="p-4">
+        {/* <div className="bg-teal-200">headder</div> */}
+
         <div>{<Outlet />}</div>
-        <p>footer</p>
+
+        </div>
+        {/* <p>footer</p> */}
     </div>
     )
    
